@@ -1,0 +1,8 @@
+#zephyr_editable_datatable:
+#    resource: "@SgDatatablesBundle/Controller/"
+#    type:     annotation
+
+zephyr_editable:
+    resource: "@ZephyrEditableBundle/Controller/"
+    type:     annotation
+    prefix:   /

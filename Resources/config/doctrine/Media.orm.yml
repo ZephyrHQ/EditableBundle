@@ -1,0 +1,11 @@
+Zephyr\EditableBundle\Entity\Media:
+    type: entity
+    table: content_media
+    id: { id: { type: integer, id: true, generator: { strategy: AUTO } } }
+    fields:
+        reference:      { type: string, length: 255 }
+        description:    { type: string, length: 255 }
+        fileName:       { type: string, length: 255 }
+        createdAt:      { type: datetime, column: created_at }
+        updatedAt:      { type: datetime, column: updated_at }
+    lifecycleCallbacks: {  }

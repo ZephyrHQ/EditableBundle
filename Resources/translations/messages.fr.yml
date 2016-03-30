@@ -1,0 +1,8 @@
+dt:
+    content:
+        titles:
+            id: id
+            locale: Locale
+            page: Page
+            reference: Référence
+            content: Contenu

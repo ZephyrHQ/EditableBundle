@@ -1,0 +1,24 @@
+services:
+#    zephyr_editable.twig_extension:
+#        class: Zephyr\EditableBundle\Twig\Extension
+#        arguments: ["@service_id", "plain_value", %parameter%]
+#        public: false
+#        tags:
+#            - { name: twig.extension }
+    zephyr_editable.datatable.content:
+        class: Zephyr\EditableBundle\Datatables\ContentDatatable
+        tags:
+            - { name: sg.datatable.view }
+
+    zephyr_editable.datatable.media:
+        class: Zephyr\EditableBundle\Datatables\MediaDatatable
+        tags:
+            - { name: sg.datatable.view }
+
+    zephyr_editable.form.type.text:
+        class: Zephyr\EditableBundle\Form\EditableType
+        calls: 
+            - [setEntityManager, [ '@doctrine.orm.entity_manager' ] ]
+        tags:
+            - { name: form.type }
+

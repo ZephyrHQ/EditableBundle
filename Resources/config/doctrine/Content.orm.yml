@@ -1,0 +1,11 @@
+Zephyr\EditableBundle\Entity\Content:
+    type: entity
+    table: content_editable
+    repositoryClass: Zephyr\EditableBundle\Repository\ContentRepository
+    id: { id: { type: integer, id: true, generator: { strategy: AUTO } } }
+    fields:
+        locale:     { type: string, length: 255 }
+        page:       { type: string, length: 255 }
+        reference:  { type: string, length: 255 }
+        content:    { type: text }
+    lifecycleCallbacks: {  }
