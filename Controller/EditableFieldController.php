@@ -5,7 +5,6 @@ namespace Zephyr\EditableBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sg\DatatablesBundle\Controller\EditableController;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
@@ -65,10 +64,10 @@ class EditableFieldController extends EditableController
 
         $finalEntity = null === $getter ? $entity : $entity->$getter();
 
-        if(!$this->isGranted('EDITABLE_EDIT', $finalEntity)){
+        if (!$this->isGranted('EDITABLE_EDIT', $finalEntity)) {
             throw $this->createAccessDeniedException();
         }
-        
+
         return parent::editAction($request);
     }
 }
