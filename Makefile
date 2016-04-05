@@ -3,7 +3,7 @@ vendor/autoload.php:
 
 .PHONY: sniff
 sniff: vendor/autoload.php
-	vendor/bin/phpcs --standard=PSR2 src -n
+	vendor/bin/phpcs --standard=PSR2 $(ls | grep -v vendor) -n
 
 .PHONY: test
 test: vendor/autoload.php
