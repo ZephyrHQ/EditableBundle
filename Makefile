@@ -3,7 +3,7 @@ vendor/autoload.php:
 
 .PHONY: sniff
 sniff: vendor/autoload.php
-	vendor/bin/phpcs --standard=symfony2 Controller Datatables DependencyInjection Entity Repository Resources Tests ZephyrEditableBundle.php -n
+	vendor/bin/phpcs --standard=PSR2 Controller Datatables DependencyInjection Entity Repository Resources Tests ZephyrEditableBundle.php -n
 
 .PHONY: test
 test: vendor/autoload.php
